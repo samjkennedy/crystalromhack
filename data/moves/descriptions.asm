@@ -165,7 +165,7 @@ MoveDescriptions::
 	dw SuperFangDescription
 	dw SlashDescription
 	dw SubstituteDescription
-	dw StruggleDescription
+	dw MoonblastDescription
 	dw SketchDescription
 	dw TripleKickDescription
 	dw ThiefDescription
@@ -253,10 +253,10 @@ MoveDescriptions::
 	dw WhirlpoolDescription
 	dw BeatUpDescription
 	dw DisrmingVceDescription
+	dw PlayRoughDescription
 	dw DrainKissDescription
-	dw MoonblastDescription
+	dw StruggleDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFFDescription
 	dw Move00Description
 	assert_table_length $100
 
@@ -1273,6 +1273,10 @@ BeatUpDescription:
 DisrmingVceDescription:
 	db   "An attack that"
 	next "never misses.@"
+
+PlayRoughDescription:
+	db   "An attack that may"
+	next "lower ATK.@"
 
 DrainKissDescription:
 	db   "Steals 1/2 of the"

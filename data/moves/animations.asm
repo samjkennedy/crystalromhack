@@ -166,7 +166,7 @@ BattleAnimations::
 	dw BattleAnim_SuperFang
 	dw BattleAnim_Slash
 	dw BattleAnim_Substitute
-	dw BattleAnim_Struggle
+	dw BattleAnim_Moonblast
 	dw BattleAnim_Sketch
 	dw BattleAnim_TripleKick
 	dw BattleAnim_Thief
@@ -254,12 +254,13 @@ BattleAnimations::
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
 	dw BattleAnim_DisrmingVce
+	dw BattleAnim_PlayRough
 	dw BattleAnim_DrainKiss
-	dw BattleAnim_Moonblast
+	dw BattleAnim_Struggle
 	assert_table_length NUM_ATTACKS + 1
-	dw BattleAnim_SweetScent2
 	assert_table_length $100
 ; $100
+	dw BattleAnim_SweetScent2
 	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
 	dw BattleAnim_ReturnMon
@@ -4613,6 +4614,21 @@ BattleAnim_DisrmingVce:
 	anim_call BattleAnimSub_Sound
 	anim_obj BATTLE_ANIM_OBJ_SING, 64, 92, $2
 	anim_wait 64
+	anim_ret
+
+BattleAnim_PlayRough:
+	anim_1gfx BATTLE_ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect BATTLE_BG_EFFECT_TACKLE, $0, BG_EFFECT_USER, $0
+	anim_wait 2
+.loop
+	anim_sound 0, 1, SFX_TACKLE
+	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $4, $2
+	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 128, 56, $0
+	anim_wait 6
+	anim_loop 10, .loop
+	anim_wait 16
+	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
 BattleAnim_DrainKiss:

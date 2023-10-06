@@ -164,7 +164,7 @@ MoveNames::
 	li "SUPER FANG"
 	li "SLASH"
 	li "SUBSTITUTE"
-	li "STRUGGLE"
+	li "MOONBLAST"
 	li "SKETCH"
 	li "TRIPLE KICK"
 	li "THIEF"
@@ -252,6 +252,7 @@ MoveNames::
 	li "WHIRLPOOL"
 	li "BEAT UP"	
 	li "DISARMNG VCE"
+	li "PLAY ROUGH"
 	li "DRAIN KISS"
-	li "MOONBLAST"
+	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS
