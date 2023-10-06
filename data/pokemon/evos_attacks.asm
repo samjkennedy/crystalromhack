@@ -223,7 +223,8 @@ BeedrillEvosAttacks:
 PidgeyEvosAttacks:
 	db EVOLVE_LEVEL, 18, PIDGEOTTO
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, DRAIN_KISS
+	db 1, MOONBLAST
 	db 5, SAND_ATTACK
 	db 9, GUST
 	db 15, QUICK_ATTACK
@@ -266,8 +267,8 @@ PidgeotEvosAttacks:
 RattataEvosAttacks:
 	db EVOLVE_LEVEL, 20, RATICATE
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, TAIL_WHIP
+	db 1, DRAIN_KISS
+	db 1, MOONBLAST
 	db 7, QUICK_ATTACK
 	db 13, HYPER_FANG
 	db 20, FOCUS_ENERGY
@@ -2058,8 +2059,8 @@ MewEvosAttacks:
 ChikoritaEvosAttacks:
 	db EVOLVE_LEVEL, 16, BAYLEEF
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, DRAIN_KISS
+	db 1, PLAY_ROUGH
+	db 1, GROWL
 	db 1, DISRMING_VCE
 	db 1, MOONBLAST
 	db 8, RAZOR_LEAF
