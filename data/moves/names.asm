@@ -250,5 +250,8 @@ MoveNames::
 	li "FUTURE SIGHT"
 	li "ROCK SMASH"
 	li "WHIRLPOOL"
-	li "BEAT UP"
+	li "BEAT UP"	
+	li "DISARMNG VCE"
+	li "DRAIN KISS"
+	li "MOONBLAST"
 	assert_list_length NUM_ATTACKS
